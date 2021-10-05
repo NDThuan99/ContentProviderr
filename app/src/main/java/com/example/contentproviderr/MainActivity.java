@@ -19,6 +19,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+<<<<<<< HEAD
+=======
+        Sevicerr sevicerr = new Sevicerr();
+>>>>>>> 36ea814 (Initial commit)
     }
 
     public void onClickAddName(View view) {
