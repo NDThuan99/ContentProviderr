@@ -4,10 +4,14 @@ import android.os.Environment;
 import android.util.Log;
 
 import java.io.File;
+import java.io.FilenameFilter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Sevicerr {
+    public Sevicerr() {
+    }
+
     ArrayList<HashMap<String,String>> getPlayList(String rootPath) {
         ArrayList<HashMap<String,String>> fileList = new ArrayList<>();
         try {
@@ -27,7 +31,7 @@ public class Sevicerr {
                     fileList.add(song);
                 }
            }
-            Log.d("XXX", fileList.get(0).toString());
+            Log.d("XXX", fileList.size()+"");
             return fileList;
         } catch (Exception e) {
             return null;
@@ -44,6 +48,9 @@ public class Sevicerr {
     }*/
     /*Lưu ý: sử dụng "/storage/dcard1/" để đọc tệp từ sdCard
     và sử dụng Environment.getExternalStorageDirectory(). GetAbsolutePath() để đọc tệp từ bộ nhớ điện thoại*/
-
-
+    class FileExtensionFilter implements FilenameFilter {
+        public boolean accept(File dir, String name) {
+            return (name.endsWith(".mp3") || name.endsWith(".MP3"));
+        }
+    }
 }
