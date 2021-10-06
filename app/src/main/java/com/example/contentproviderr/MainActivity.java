@@ -1,23 +1,17 @@
 package com.example.contentproviderr;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.ContentValues;
-import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.provider.UserDictionary;
 import android.util.Log;
-import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
