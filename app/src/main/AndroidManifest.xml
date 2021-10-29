@@ -19,7 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <provider android:name=".ContentProviderr"
+        <provider android:name=".MyContentProvider"
             android:authorities="com.example.provider.College">
         </provider>
     </application>

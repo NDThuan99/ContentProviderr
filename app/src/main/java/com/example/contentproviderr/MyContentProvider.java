@@ -18,7 +18,7 @@ import androidx.annotation.Nullable;
 
 import java.util.HashMap;
 
-public class ContentProviderr extends ContentProvider {
+public class MyContentProvider extends android.content.ContentProvider {
 
     static final String PROVIDER_NAME = "com.example.provider.College";
     static final String URL = "content://" + PROVIDER_NAME + "/students";
