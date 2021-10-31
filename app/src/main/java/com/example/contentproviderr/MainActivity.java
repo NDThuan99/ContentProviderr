@@ -31,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickAddName(View view) {
+        /*Todo: ContentValues
+         * cho phép khai báo các cột và giá trị bên trong nó
+         * dưới dạng các cặp khóa/giá trị (key/value). Hữu ích khi chèn hay cập nhật dữ liệu đến bảng.
+         * put(): thêm một giá trị đến tập dữ liệu
+         */
         ContentValues values = new ContentValues();
 
         values.put(MyContentProvider.NAME,
@@ -46,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 uri.toString(), Toast.LENGTH_LONG).show();
     }
 
+    @SuppressLint("Range")
     public void onClickRetrieveStudents(View view) {
         // Retrieve student records
         String URL = "content://com.example.provider.College/students";
@@ -62,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
                         ", " +  cursor.getString(cursor.getColumnIndex( MyContentProvider.NAME)) +
                         ", " + cursor.getString(cursor.getColumnIndex( MyContentProvider.GRADE));
                 Toast.makeText(this, str, Toast.LENGTH_SHORT).show();
+                Log.d("ThuanNDd", "đây là lần: " + i + ": " + cursor.getString(cursor.getColumnIndex( MyContentProvider.NAME))
+                        + ", " + cursor.getString(cursor.getColumnIndex( MyContentProvider.GRADE)));
                 i++;
             } while (cursor.moveToNext());
         }
